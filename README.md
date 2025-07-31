@@ -96,7 +96,7 @@ python main.py train
 
 ### Custom Training Options
 ```bash
-# Train with 60 features
+# Train with different number of MFCCs
 python main.py train --features 60
 
 # Train only ML models
@@ -124,6 +124,9 @@ python main.py predict
 ```bash
 # Use specific models
 python main.py predict --models gbc_40 lightgbm_40
+
+# Predict with models with a different number of MFCCs (Make sure to have trained models with this number of MFCCs beforehand)
+python main.py predict --features 60
 
 # ML only
 python main.py predict --ml-only
@@ -163,9 +166,8 @@ The system will automatically detect available models:
 - `saved_models_DL/` - DL model files and metrics
 
 ### Prediction Outputs
-- `prediction_results_{timestamp}.json` - Combined results
-- `emotion_predictions_{timestamp}.csv` - ML prediction results
-- `emotion_results_{timestamp}.csv` - Text analysis results
+- `prediction_results_{timestamp}.json`
+
 
 * The datasets can be found in: 
   - https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio
