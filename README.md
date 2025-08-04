@@ -44,7 +44,7 @@ TCC_final/
 
 ```bash
 git clone https://github.com/aisepucrio/SpeechEmotion.git
-cd TCC_final
+cd SpeechEmotion
 ```
 
 ### 2. Setup Environment
@@ -179,3 +179,4 @@ The system will automatically detect available models:
   - https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess
   - https://www.kaggle.com/datasets/ejlok1/cremad
   - https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-saveec
+
