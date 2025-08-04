@@ -40,23 +40,30 @@ TCC_final/
 
 ## 🚀 Quick Start
 
-### 1. Setup Environment
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aisepucrio/SpeechEmotion.git
+cd TCC_final
+```
+
+### 2. Setup Environment
 
 Make sure you have Python 3.11.8 installed.
 
-```
+```bash
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Configure Gemini API (Optional)
+### 3. Configure Gemini API (Optional)
 
 Edit `gemini_config.py` and add your Gemini API key:
 ```python
 GEMINI_API_KEY = "your_actual_api_key_here"
 ```
 
-### 3. Prepare Data
+### 4. Prepare Data
 
 #### Standard Datasets
 Place your datasets in the `Dataset/` folder:
@@ -96,7 +103,7 @@ python main.py train
 
 ### Custom Training Options
 ```bash
-# Train with different number of MFCCs
+# Train with 60 features
 python main.py train --features 60
 
 # Train only ML models
@@ -124,9 +131,6 @@ python main.py predict
 ```bash
 # Use specific models
 python main.py predict --models gbc_40 lightgbm_40
-
-# Predict with models with a different number of MFCCs (Make sure to have trained models with this number of MFCCs beforehand)
-python main.py predict --features 60
 
 # ML only
 python main.py predict --ml-only
@@ -166,8 +170,9 @@ The system will automatically detect available models:
 - `saved_models_DL/` - DL model files and metrics
 
 ### Prediction Outputs
-- `prediction_results_{timestamp}.json`
-
+- `prediction_results_{timestamp}.json` - Combined results
+- `emotion_predictions_{timestamp}.csv` - ML prediction results
+- `emotion_results_{timestamp}.csv` - Text analysis results
 
 * The datasets can be found in: 
   - https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio
