@@ -44,7 +44,7 @@ decorator>=4.3.0
 pooch>=1.0
 msgpack>=1.0
 lazy-loader>=0.1
-typing-extensions==4.6.0
+typing-extensions==4.5.0
 
 # Development & Testing (Optional)
 # Uncomment if you need these for development
